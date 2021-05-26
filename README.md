@@ -1,6 +1,5 @@
 # Management System
-[출처: React와 Node.js로 만드는 고객 관리 시스템 개발 강좌]
-(https://ndb796.tistory.com/211?category=1030599)
+[참고: React와 Node.js로 만드는 고객 관리 시스템 개발 강좌](https://ndb796.tistory.com/211?category=1030599)
 
 # Getting Started with Create React App
 
