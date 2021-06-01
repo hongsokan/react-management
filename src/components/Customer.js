@@ -1,16 +1,20 @@
+import { TableCell, TableRow } from '@material-ui/core'
 import React, { Component } from 'react'
 
 export default class Customer extends Component {
     render() {
         return (
-            <div>
-                <CustomerProfile id={this.props.id} name={this.props.name}></CustomerProfile>
-                <CustomerInfo birthday={this.props.birthday} description={this.props.description}></CustomerInfo>
-            </div>
+            <TableRow>
+                <TableCell>{this.props.id}</TableCell>
+                <TableCell>{this.props.name}</TableCell>
+                <TableCell>{this.props.birthday}</TableCell>
+                <TableCell>{this.props.description}</TableCell>
+            </TableRow>
         )
     }
 }
 
+/*
 class CustomerProfile extends Component {
     render() {
         return (
@@ -32,3 +36,4 @@ class CustomerInfo extends Component {
         )
     }
 }
+*/
