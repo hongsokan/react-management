@@ -3,6 +3,9 @@
 # database
 /database.json
 
+# upload
+/upload
+
 # vscode
 /.vscode
 
