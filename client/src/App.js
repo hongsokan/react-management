@@ -18,10 +18,25 @@ const styles = theme => ({
 });
 
 class App extends Component {
+  constructor(props) {
+    super(props);
 
-  state = {
-    customers: '',
-    completed: 0
+    this.state = {
+      customers: '',
+      completed: 0
+    }
+    this.stateRefresh = this.stateRefresh.bind(this);
+  }
+
+  stateRefresh() {
+    this.setState({
+      customers: '',
+      completed: 0
+    });
+
+    this.callApi()
+      .then(res => this.setState({ customers: res }))
+      .catch(err => console.log(err));
   }
 
   componentDidMount() {
@@ -76,7 +91,7 @@ class App extends Component {
             </TableBody>
           </Table>
         </Paper>
-        <CustomerAdd />
+        <CustomerAdd stateRefresh={this.stateRefresh}/>
       </div>
     );
   }

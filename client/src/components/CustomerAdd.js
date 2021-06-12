@@ -25,6 +25,7 @@ class CustomerAdd extends React.Component {
         this.addCustomer()
             .then((response) => {
                 console.log(response.data);
+                this.props.stateRefresh(); // 서버에서 응답을 받고 나서 새로고침을 비동기 처리
             })
         this.setState({
             file: null,
@@ -35,7 +36,7 @@ class CustomerAdd extends React.Component {
             fileName: ''
         })
 
-        window.location.reload(); // 실제는 전체 페이지가 아닌 필요한 부분만 새로고침
+        // window.location.reload(); // 실제는 전체 페이지가 아닌 필요한 부분만 새로고침
     }
 
     handleFileChange(e) {
