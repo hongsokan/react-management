@@ -4,10 +4,22 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+
+const theme = createMuiTheme({
+  typography: {
+    fontFamily: '"Noto Sans KR", serif',
+  },
+});
+
 ReactDOM.render(
-  // <React.StrictMode>
-    <App />,
-  // </React.StrictMode>,
+  /*
+  <React.StrictMode>
+  <App />
+  </React.StrictMode>,
+  */
+
+  <MuiThemeProvider theme={theme}><App /></MuiThemeProvider>,
   document.getElementById('root')
 );
 
